@@ -8,7 +8,7 @@
 
 // for rtmidi
 #ifdef TARGET_LINUX
-	#define __LINUX_ALSASEQ__
+	#define __LINUX_ALSA__
 #elif defined(TARGET_WIN32)
 	#define __WINDOWS_MM__
 #elif defined(TARGET_MACOSX)
