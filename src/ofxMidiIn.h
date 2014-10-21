@@ -16,10 +16,15 @@
 #ifdef TARGET_OF_IPHONE
 	#include "ios/ofxPGMidiIn.h"
 	#define OFX_MIDI_IN_TYPE ofxPGMidiIn
+#elif TARGET_ANDROID
+    #include "android/ofxAndroidMidiIn.h"
+    #define OFX_MIDI_IN_TYPE ofxAndroidMidiIn
 #else // OSX, Win, Linux
 	#include "desktop/ofxRtMidiIn.h"
 	#define OFX_MIDI_IN_TYPE ofxRtMidiIn
 #endif
+
+
 
 ///
 /// a midi input port
