@@ -16,7 +16,7 @@
 #ifdef TARGET_OF_IPHONE
 	#include "ios/ofxPGMidiIn.h"
 	#define OFX_MIDI_IN_TYPE ofxPGMidiIn
-#elif TARGET_ANDROID
+#elif OF_TARGET_ANDROID
     #include "android/ofxAndroidMidiIn.h"
     #define OFX_MIDI_IN_TYPE ofxAndroidMidiIn
 #else // OSX, Win, Linux
