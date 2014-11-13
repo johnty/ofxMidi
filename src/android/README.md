@@ -1,10 +1,17 @@
 Android MIDI interface for ofxMidi, using the Android MIDI library
 (https://github.com/nettoyeurny/btmidi)
 
-Essentially, the MIDI i/o is handled through JNI calls to the Java code running on the other side. More documentation to follow as implementation continues...
+Currently, the Android Midi in/outs are simply empty stubs, as the port management and data passing is handled completely on the Android (JAVA) side. The data is passed via JNI through ofxAndroidMidiBridge (implemented in our modified version of ofxAndroid) which gets the data to/from the C++ oFApp.
+
+Dependencies:
+- openFrameworks Android environment
+- ofxAndroid (our ICubeX version with ofxAndroidMidiBridge)
+- exampleICubeXAndroid app (to show how it works)
+- AndroidMidi project (as library)
 
 Usage Instructions
-
-In Eclipse:
-- add the AndroidMidi Java Project to your workspace
-- for the addons.make file in the project root, add ofxMidi
+- Place this version of ofxMidi in the addons folder
+- Place ofxAndroid into addons folder
+- Import AndroidMidi into workspace
+- import the example app into workspace
+-- for the addons.make file in the project root, make sure ofxMidi, ofxAndroid are present
