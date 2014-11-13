@@ -1,6 +1,10 @@
 #pragma once
 #include "../ofxBaseMidi.h"
 
+
+//*** NOTE*** this is a stub for now; the MIDI port management is handled on the android side
+//  and all the data gets passed through ofxAndroidMidiBridge!!
+
 class ofxAndroidMidiIn : public ofxBaseMidiIn {
     
 public:
