@@ -1,3 +1,17 @@
+
+ofxMidi with Android Midi Port stubs
+====================================
+
+This is a modified version of ofxMidi for iCubeX, with empty stubs for midi in/out ports on android. This is intended for use with the AndroidMIDI library (completely implemented in Java), which performs the port management and data passing within the Android app itself. From there, the data is passed via JNI through the ofxAndroidMidiBridge into the C++ oF app, where it is connected to the ofxICubeX interface. This allows an oF Android app to make use of the MIDI capabilities of the Java library.
+
+A more complete future implementation would be to actually fill the ofxAndroidMidiIn/Out classes with the JNI connections.
+
+See ofxAndroid (ICubeX-version) and exampleICubeXAndroid for more details.
+
+
+
+original ofxMidi Documentation follows.
+----
 ofxMidi
 =======
 <p align="center">
